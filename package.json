@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack --mode development",
-    "watch": "npm webpack serve"
+    "watch": "webpack serve",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "keywords": [
     "vue",
@@ -16,6 +18,13 @@
   "author": "mpq",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.17.2",
+    "@storybook/addon-actions": "^6.4.18",
+    "@storybook/addon-docs": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.4.18",
+    "@storybook/vue3": "^6.4.18",
+    "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
     "vue-loader": "^17.0.0",
