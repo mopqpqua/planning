@@ -16,5 +16,12 @@ const Template = (args) => ({
 export const Primary = Template.bind({});
 Primary.args = {
     primary: true,
-    label: 'primary',
+};
+export const Secondary = Template.bind({});
+Secondary.args = {
+    secondary: true,
+};
+export const Text = Template.bind({});
+Text.args = {
+    text: true,
 };

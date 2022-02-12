@@ -1,5 +1,14 @@
 <template>
-    <button class="a-button">{{ label }}</button>
+    <button
+        :class="[
+            'a-button',
+            {'a-button--primary': primary},
+            {'a-button--secondary': secondary},
+            {'a-button--text': text},
+        ]"
+    >
+        {{ label }}
+    </button>
 </template>
 
 <script>
@@ -9,6 +18,8 @@ export default defineComponent({
     name: 'a-button',
     props: {
         primary: Boolean,
+        secondary: Boolean,
+        text: Boolean,
         label: {
             type: String,
             default: 'click',
@@ -16,3 +27,6 @@ export default defineComponent({
     },
 });
 </script>
+
+<style src="./a-button.css">
+</style>
