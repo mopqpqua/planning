@@ -1,6 +1,8 @@
 .a-button {
-    width: 132px;
+    --padding: 20px;
+    min-width: calc(92px + var(--padding) * 2);
     height: 40px;
+    padding: 0 var(--padding);
     border: none;
     border-radius: 24px;
     background: none;
@@ -13,6 +15,18 @@
     color: #fff;
 }
 
+.a-button--primary:hover {
+    background: rgb(49, 106, 237);
+}
+
+.a-button--primary:focus {
+    background: rgb(45, 97, 216);
+}
+
+.a-button--primary:active {
+    background: rgb(43, 93, 207);
+}
+
 .a-button--secondary {
     border: 2px solid #1071FF;
     color: #1071FF;
@@ -20,4 +34,19 @@
 
 .a-button--text {
     color: #1071FF;
+}
+
+.a-button--secondary:hover,
+.a-button--text:hover {
+    background: rgba(52, 111, 246, .04);
+}
+
+.a-button--secondary:focus,
+.a-button--text:focus {
+    background: rgba(52, 111, 246, .12);
+}
+
+.a-button--secondary:active,
+.a-button--text:active {
+    background: rgba(52, 111, 246, .16);
 }
