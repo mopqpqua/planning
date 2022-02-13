@@ -7,6 +7,7 @@ export default {
         primary: false,
         secondary: false,
         text: false,
+        disabled: false,
     },
 };
 

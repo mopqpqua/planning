@@ -6,6 +6,7 @@
             {'a-button--secondary': secondary},
             {'a-button--text': text},
         ]"
+        :disabled="disabled"
     >
         {{ label }}
     </button>
@@ -20,6 +21,7 @@ export default defineComponent({
         primary: Boolean,
         secondary: Boolean,
         text: Boolean,
+        disabled: Boolean,
         label: {
             type: String,
             default: 'click',

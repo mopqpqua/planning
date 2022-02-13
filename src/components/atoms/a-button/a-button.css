@@ -10,6 +10,11 @@
     cursor: pointer;
 }
 
+.a-button:disabled {
+    cursor: not-allowed;
+    color: rgba(0, 0, 0, .22)
+}
+
 .a-button--primary {
     background: #1071FF;
     color: #fff;
@@ -27,17 +32,25 @@
     background: rgb(43, 93, 207);
 }
 
+.a-button--primary:disabled {
+    background: rgba(0, 0, 0, .05);
+}
+
 .a-button--secondary {
     border: 2px solid #1071FF;
     color: #1071FF;
+}
+
+.a-button--secondary:disabled {
+    border: 2px solid rgba(0, 0, 0, .05);
 }
 
 .a-button--text {
     color: #1071FF;
 }
 
-.a-button--secondary:hover,
-.a-button--text:hover {
+.a-button--secondary:hover:not(:disabled),
+.a-button--text:hover:not(:disabled) {
     background: rgba(52, 111, 246, .04);
 }
 
