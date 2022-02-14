@@ -5,6 +5,7 @@
             {'a-button--primary': primary},
             {'a-button--secondary': secondary},
             {'a-button--text': text},
+            {'a-button--big': big},
         ]"
         :disabled="disabled"
     >
@@ -21,6 +22,7 @@ export default defineComponent({
         primary: Boolean,
         secondary: Boolean,
         text: Boolean,
+        big: Boolean,
         disabled: Boolean,
         label: {
             type: String,

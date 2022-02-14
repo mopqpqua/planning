@@ -1,12 +1,13 @@
 import AButton from './a-button.vue';
 
 export default {
-    title: 'atoms/a-button',
+    title: 'ui system/atoms/a-button',
     components: AButton,
     args: {
         primary: false,
         secondary: false,
         text: false,
+        big: false,
         disabled: false,
     },
 };
