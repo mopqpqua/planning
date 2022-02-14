@@ -3,6 +3,10 @@
         class="a-plus-button"
         :disabled="disabled"
     >
+        <img
+            class="a-plus-button__icon"
+            src="../../../assets/icons/icon-plus.svg"
+            alt="icon plus"/>
     </button>
 </template>
 
@@ -12,7 +16,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
     name: 'a-plus-button',
     props: {
-        big: Boolean,
         disabled: Boolean,
     },
 });

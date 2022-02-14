@@ -1,2 +1,32 @@
 .a-plus-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100%;
+    background: #1070FF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, .24);
+    cursor: pointer;
+    transition: box-shadow .15s;
+}
+
+.a-plus-button:hover {
+    background: rgb(49, 106, 237);
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .24);
+}
+
+.a-plus-button:focus {
+    background: rgb(45, 97, 216);
+}
+
+.a-plus-button:active {
+    background: rgb(43, 93, 207);
+}
+
+.a-plus-button:disabled {
+    background: rgba(0, 0, 0, .07);
+    box-shadow: none;
+    cursor: not-allowed;
 }

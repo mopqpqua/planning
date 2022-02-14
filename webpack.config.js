@@ -30,14 +30,14 @@ module.exports = {
             },
             {
                 test: [/\.(png|jpg|svg)$/],
-                type: 'asser/resource',
+                type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name][ext]',
                 },
             },
             {
                 test: [/\.(woff|woff2|ttf)$/],
-                type: 'asser/resource',
+                type: 'asset/resource',
                 generator: {
                     filename: 'assets/fonts/[name][ext]',
                 },
