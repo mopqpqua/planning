@@ -2,7 +2,7 @@ import APlusButton from './a-plus-button';
 
 export default {
     title: 'ui system/atoms/a-plus-button',
-    components: APlusButton,
+    component: APlusButton,
     args: {
         disabled: false,
     },

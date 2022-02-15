@@ -2,7 +2,7 @@ import AButton from './a-button.vue';
 
 export default {
     title: 'ui system/atoms/a-button',
-    components: AButton,
+    component: AButton,
     args: {
         primary: false,
         secondary: false,
