@@ -5,7 +5,7 @@
     >
         <img
             class="a-plus-button__icon"
-            src="../../../assets/icons/icon-plus.svg"
+            src="@assets/icons/icon-plus.svg"
             alt="icon plus"/>
     </button>
 </template>

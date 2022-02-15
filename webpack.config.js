@@ -14,8 +14,10 @@ module.exports = {
     resolve: {
         extensions: ['.vue', '.js'],
         alias: {
+            vue: 'vue/dist/vue.esm-bundler.js',
             '@': path.resolve(__dirname, 'src'),
-            '@components': path.resolve(__dirname, 'src/components'),
+            '@assets': path.resolve(__dirname, 'src/assets'),
+            '@atoms': path.resolve(__dirname, 'src/components/atoms'),
         },
     },
     module: {
@@ -29,11 +31,15 @@ module.exports = {
                 use: ['vue-loader'],
             },
             {
-                test: [/\.(png|jpg|svg)$/],
+                test: [/\.(png|jpg)$/],
                 type: 'asset/resource',
                 generator: {
                     filename: 'assets/img/[name][ext]',
                 },
+            },
+            {
+                test: [/\.svg$/],
+                type: 'asset/inline',
             },
             {
                 test: [/\.(woff|woff2|ttf)$/],

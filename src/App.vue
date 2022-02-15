@@ -1,13 +1,15 @@
 <template>
     <main>
-        HELLO WORLD!!!
+        <a-plus-button/>
     </main>
 </template>
 <script>
+import APlusButton from '@atoms/a-plus-button/a-plus-button';
+
 export default {
     name: 'App',
-    data() {
-        return {};
+    components: {
+        APlusButton,
     },
 };
 </script>
