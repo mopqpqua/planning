@@ -4,8 +4,14 @@
         :disabled="disabled"
     >
         <img
+            v-if="!disabled"
             class="a-plus-button__icon"
             src="@assets/icons/icon-plus.svg"
+            alt="icon plus"/>
+        <img
+            v-else
+            class="a-plus-button__icon"
+            src="@assets/icons/icon-dark-plus.svg"
             alt="icon plus"/>
     </button>
 </template>
