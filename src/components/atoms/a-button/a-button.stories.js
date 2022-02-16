@@ -4,11 +4,11 @@ export default {
     title: 'ui system/atoms/a-button',
     component: AButton,
     args: {
-        primary: false,
-        secondary: false,
-        text: false,
         big: false,
         disabled: false,
+    },
+    argTypes: {
+        onClick: { action: 'clicked' },
     },
 };
 

@@ -7,4 +7,15 @@
     flex-shrink: 0;
     border-radius: 2px;
     background: rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+
+.a-checkbox__checkbox:hover,
+.a-checkbox__checkbox:focus,
+.a-checkbox__checkbox:active {
+    background: rgba(0, 0, 0, .10);
+}
+
+.a-checkbox__hidden-checkbox:disabled ~ .a-checkbox__checkbox {
+    cursor: not-allowed;
 }

@@ -3,19 +3,22 @@
         class="a-checkbox"
     >
         <input
-            class="visually-hidden"
+            class="visually-hidden a-checkbox__hidden-checkbox"
             type="checkbox"
             :checked="checked"
             :disabled="disabled"
         />
         <span class="a-checkbox__checkbox">
             <img
-                v-if="checked"
-                :class="[
-                    'a-checkbox__mark',
-                    {'a-checkbox__mark--disabled': disabled},
-                ]"
+                v-if="checked && !disabled"
+                class="a-checkbox__mark"
                 src="@assets/icons/icon-checkbox-mark.svg"
+                alt="checkbox mark"
+            />
+            <img
+                v-if="checked && disabled"
+                class="a-checkbox__mark"
+                src="@assets/icons/icon-checkbox-dark-mark.svg"
                 alt="checkbox mark"
             />
         </span>
@@ -30,11 +33,6 @@ export default defineComponent({
     props: {
         checked: Boolean,
         disabled: Boolean,
-    },
-    methods: {
-        check() {
-            this.checked = !this.checked;
-        },
     },
 });
 </script>

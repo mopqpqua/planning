@@ -1,4 +1,5 @@
 import ACheckbox from './a-checkbox';
+import { action } from '@storybook/addon-actions';
 
 export default {
     title: 'ui system/atoms/a-checkbox',
@@ -7,9 +8,8 @@ export default {
         disabled: false,
     },
     argTypes: {
-        onChange: { action: 'changed' }
+        onChange: { action: action('changed') }
     },
-    template: '<a-checkbox v-bind="args"/>',
 };
 
 const Template = (args) => ({
@@ -21,6 +21,9 @@ const Template = (args) => ({
 });
 
 export const NotChecked = Template.bind({});
+NotChecked.args = {
+    checked: false,
+};
 
 export const Checked = Template.bind({});
 Checked.args = {

@@ -6,7 +6,9 @@ export default {
     args: {
         disabled: false,
     },
-    template: '<a-plus-button v-bind="args"/>',
+    argTypes: {
+        onClick: { action: 'clicked' },
+    },
 };
 
 export const PlusButton = (args) => ({
