@@ -6,7 +6,7 @@
     align-items: center;
     border: none;
     border-radius: 100%;
-    background: #1070FF;
+    background: var(--color-blue-main);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .24);
     cursor: pointer;
     transition: box-shadow .15s;
