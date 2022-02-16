@@ -27,5 +27,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="./a-plus-button.css">
-</style>
+<style src="./a-plus-button.css"/>

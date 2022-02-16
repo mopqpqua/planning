@@ -32,5 +32,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="./a-button.css">
-</style>
+<style src="./a-button.css"/>
