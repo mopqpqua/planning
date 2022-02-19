@@ -10,9 +10,15 @@
     cursor: pointer;
 }
 
-.a-checkbox__checkbox:hover,
-.a-checkbox__checkbox:focus,
-.a-checkbox__checkbox:active {
+.a-checkbox__checkbox:hover:not(
+    .a-checkbox__hidden-checkbox:disabled ~ .a-checkbox__checkbox
+),
+.a-checkbox__checkbox:focus:not(
+    .a-checkbox__hidden-checkbox:disabled ~ .a-checkbox__checkbox
+),
+.a-checkbox__checkbox:active:not(
+    .a-checkbox__hidden-checkbox:disabled ~ .a-checkbox__checkbox
+) {
     background: rgba(0, 0, 0, .10);
 }
 
