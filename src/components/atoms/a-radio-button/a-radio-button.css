@@ -1,0 +1,31 @@
+.a-radio-button__radio-button {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 100%;
+    background: rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+
+.a-radio-button__radio-button--checked {
+    background-image: radial-gradient(
+        circle at center, var(--color-blue-main) 30%, rgba(16, 113, 255, 0.16) 33%
+    );
+}
+
+.a-radio-button__radio-button:hover:not(
+    .a-radio-button__hidden-input:disabled ~ .a-radio-button__radio-button
+),
+.a-radio-button__radio-button:focus:not(
+    .a-radio-button__hidden-input:disabled ~ .a-radio-button__radio-button
+),
+.a-radio-button__radio-button:active:not(
+    .a-radio-button__hidden-input:disabled ~ .a-radio-button__radio-button
+) {
+    background: rgba(0, 0, 0, .10);
+}
+
+.a-radio-button__hidden-input:disabled ~ .a-radio-button__radio-button {
+    cursor: not-allowed;
+}

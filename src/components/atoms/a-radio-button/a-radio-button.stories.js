@@ -1,22 +1,22 @@
-import ACheckbox from './a-checkbox';
+import ARadioButton from './a-radio-button';
 
 export default {
-    title: 'ui system/atoms/a-checkbox',
-    component: ACheckbox,
+    title: 'ui system/atoms/a-radio-button',
+    component: ARadioButton,
     args: {
         disabled: false,
     },
     argTypes: {
         onChange: { action: 'changed' }
     },
-};
+}
 
 const Template = (args) => ({
-    components: { ACheckbox },
+    components: { ARadioButton },
     setup() {
         return { args };
     },
-    template: '<a-checkbox v-bind="args"/>',
+    template: '<a-radio-button v-bind="args"/>',
 });
 
 export const NotChecked = Template.bind({});

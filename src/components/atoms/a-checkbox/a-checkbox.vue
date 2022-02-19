@@ -3,7 +3,7 @@
         class="a-checkbox"
     >
         <input
-            class="visually-hidden a-checkbox__hidden-checkbox"
+            class="visually-hidden a-checkbox__hidden-input"
             type="checkbox"
             :checked="checked"
             :disabled="disabled"
