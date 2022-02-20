@@ -19,7 +19,7 @@
 .a-checkbox__checkbox:active:not(
     .a-checkbox__hidden-input:disabled ~ .a-checkbox__checkbox
 ) {
-    background: rgba(0, 0, 0, .10);
+    background: var(--color-bg-gray);
 }
 
 .a-checkbox__hidden-input:disabled ~ .a-checkbox__checkbox {

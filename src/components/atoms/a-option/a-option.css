@@ -1,0 +1,16 @@
+.a-option {
+    width: 100%;
+    padding: 10px 16px;
+    text-align: center;
+    list-style: none;
+    cursor: pointer;
+}
+
+.a-option:hover {
+    background: var(--color-bg-gray);
+}
+
+.a-option--active {
+    color: var(--color-blue-main);
+    fill: var(--color-blue-main);
+}
