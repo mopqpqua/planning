@@ -7,7 +7,7 @@ export default {
         disabled: false,
     },
     argTypes: {
-        onChange: { action: 'changed' }
+        onChange: { action: 'changed' },
     },
 }
 

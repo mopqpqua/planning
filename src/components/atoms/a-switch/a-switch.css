@@ -1,0 +1,27 @@
+.a-switch {
+    width: 26px;
+    height: 14px;
+    padding: 1px;
+    border-radius: 32px;
+    background: var(--color-blue-main);
+    cursor: pointer;
+}
+
+.a-switch::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    border-radius: 100%;
+    background: #fff;
+    transition: transform .2s;
+}
+
+.a-switch--checked::before {
+    transform: translateX(12px);
+}
+
+.a-switch--disabled {
+    background: rgba(16, 113, 255, 0.16);
+    cursor: not-allowed;
+}
