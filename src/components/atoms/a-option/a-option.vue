@@ -4,7 +4,7 @@
             'a-option',
             {'a-option--active': active}
         ]"
-        @click="$emit('option-chosen'), option"
+        @click="$emit('option-chosen', option)"
     >
         {{ label }}
     </li>

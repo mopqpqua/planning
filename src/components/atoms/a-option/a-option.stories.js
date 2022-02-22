@@ -20,9 +20,15 @@ const Template = (args) => ({
     template: '<a-option v-bind="args"/>',
 });
 
-export const Empty = Template.bind({});
-
 export const StringOption = Template.bind({});
 StringOption.args = {
     option: 'Heizenberg',
+};
+
+export const ObjectOption = Template.bind({});
+ObjectOption.args = {
+    option: {
+        name: 'Rick',
+        surname: 'Sanchez',
+    },
 };
