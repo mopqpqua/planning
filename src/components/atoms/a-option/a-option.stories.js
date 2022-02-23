@@ -32,3 +32,9 @@ ObjectOption.args = {
         surname: 'Sanchez',
     },
 };
+
+export const IconedOption = Template.bind({});
+IconedOption.args = {
+    iconName: 'icon-plus',
+    option: 'Heizenberg',
+};

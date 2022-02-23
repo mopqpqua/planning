@@ -6,6 +6,7 @@
         ]"
         @click="$emit('option-chosen', option)"
     >
+        <img v-if="iconName" :src="`@assets/icons/${iconName}.svg`" alt="any icon">
         {{ label }}
     </li>
 </template>
@@ -17,6 +18,7 @@ export default defineComponent({
     name: 'AOption',
     props: {
         label: String,
+        iconName: String,
         active: Boolean,
         option: [String, Number, Object, Array],
     },
