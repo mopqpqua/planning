@@ -1,8 +1,8 @@
-import AOption from './a-option';
+import MOption from './m-option';
 
 export default {
-    title: 'ui system/atoms/a-option',
-    component: AOption,
+    title: 'ui system/molecules/m-option',
+    component: MOption,
     args: {
         label: 'Label',
         active: false,
@@ -13,11 +13,11 @@ export default {
 };
 
 const Template = (args) => ({
-    components: { AOption },
+    components: { MOption },
     setup() {
         return { args };
     },
-    template: '<a-option v-bind="args"/>',
+    template: '<m-option v-bind="args"/>',
 });
 
 export const StringOption = Template.bind({});
@@ -31,10 +31,18 @@ ObjectOption.args = {
         name: 'Rick',
         surname: 'Sanchez',
     },
-};
-
-export const IconedOption = Template.bind({});
-IconedOption.args = {
-    iconName: 'icon-plus',
-    option: 'Heizenberg',
-};
+}
+;
+export const IconedOption = (args) => ({
+    components: { MOption },
+    setup() {
+        return { args };
+    },
+    template: `
+        <m-option v-bind="args">
+            <template #image>
+                <img src="@assets/icons/icon-plus.svg"/>
+            </template>
+        </m-option>
+    `,
+});

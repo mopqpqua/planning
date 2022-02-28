@@ -1,12 +1,12 @@
 <template>
     <li
         :class="[
-            'a-option',
-            {'a-option--active': active}
+            'm-option',
+            {'m-option--active': active}
         ]"
         @click="$emit('option-chosen', option)"
     >
-        <img v-if="iconName" :src="`@assets/icons/${iconName}.svg`" alt="any icon">
+        <slot name="image"></slot>
         {{ label }}
     </li>
 </template>
@@ -18,7 +18,6 @@ export default defineComponent({
     name: 'AOption',
     props: {
         label: String,
-        iconName: String,
         active: Boolean,
         option: [String, Number, Object, Array],
     },
@@ -26,4 +25,4 @@ export default defineComponent({
 });
 </script>
 
-<style src="./a-option.css"/>
+<style src="./m-option.css"/>
