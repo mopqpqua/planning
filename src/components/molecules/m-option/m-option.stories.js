@@ -1,15 +1,19 @@
 import MOption from './m-option';
+import { action } from '@storybook/addon-actions';
 
 export default {
     title: 'ui system/molecules/m-option',
     component: MOption,
     args: {
-        label: 'Label',
         active: false,
     },
     argTypes: {
         onOptionChosen: { action: 'option-chosen' },
     },
+};
+
+export const actionsData = {
+    onOptionChoosen: action('option-choosen'),
 };
 
 const Template = (args) => ({
@@ -20,17 +24,9 @@ const Template = (args) => ({
     template: '<m-option v-bind="args"/>',
 });
 
-export const StringOption = Template.bind({});
-StringOption.args = {
-    option: 'Heizenberg',
-};
-
-export const ObjectOption = Template.bind({});
-ObjectOption.args = {
-    option: {
-        name: 'Rick',
-        surname: 'Sanchez',
-    },
+export const Default = Template.bind({});
+Default.args = {
+    option: { value: 'Heizenberg', label: 'Walter' },
 };
 
 export const IconedOption = (args) => ({
