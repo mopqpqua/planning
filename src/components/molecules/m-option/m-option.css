@@ -1,6 +1,10 @@
 .m-option {
     width: 100%;
     padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
     text-align: center;
     list-style: none;
     cursor: pointer;
@@ -12,5 +16,9 @@
 
 .m-option--active {
     color: var(--color-blue-main);
+    fill: var(--color-blue-main);
+}
+
+.m-option__icon svg {
     fill: var(--color-blue-main);
 }
