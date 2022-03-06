@@ -41,7 +41,7 @@ export const IconedOption = (args) => ({
     template: `
         <m-option v-bind="args">
             <template #image>
-                <img src="@assets/icons/icon-plus.svg"/>
+                <img src="assets/icon-plus.svg"/>
             </template>
         </m-option>
     `,
