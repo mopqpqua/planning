@@ -1,5 +1,5 @@
 import MMenu from './m-menu';
-import *  as OptionStories from '../m-option/m-option.stories';
+import * as OptionStories from '../m-option/m-option.stories';
 
 export default {
     title: 'ui system/molecules/m-menu',
@@ -8,14 +8,14 @@ export default {
         options: [],
     },
     argTypes: {
-        changeCurrentOption: {},
+        onOptionChanged: {},
     },
 }
 
 const Template = (args) => ({
     components: { MMenu },
     setup() {
-        return { args };
+        return { args, ...OptionStories.actionsData };
     },
     template: '<m-menu v-bind="args"/>',
 });

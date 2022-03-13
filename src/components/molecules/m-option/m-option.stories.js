@@ -4,22 +4,23 @@ import { action } from '@storybook/addon-actions';
 export default {
     title: 'ui system/molecules/m-option',
     component: MOption,
+    excludeStories: /.*Data$/,
     args: {
         active: false,
     },
     argTypes: {
-        onOptionChosen: { action: 'option-chosen' },
+        onOptionChosen: {},
     },
 };
 
 export const actionsData = {
-    onOptionChoosen: action('option-choosen'),
+    onOptionChosen: action('option-chosen'),
 };
 
 const Template = (args) => ({
     components: { MOption },
     setup() {
-        return { args };
+        return { args, ...actionsData };
     },
     template: '<m-option v-bind="args"/>',
 });
@@ -32,7 +33,7 @@ Default.args = {
 export const IconedOption = (args) => ({
     components: { MOption },
     setup() {
-        return { args };
+        return { args, ...actionsData };
     },
     template: `
         <m-option v-bind="args">
@@ -42,11 +43,12 @@ export const IconedOption = (args) => ({
         </m-option>
     `,
 });
+IconedOption.args = { ...Default.args };
 
 export const ActiveIconedOption = (args) => ({
     components: { MOption },
     setup() {
-        return { args };
+        return { args, ...actionsData };
     },
     template: `
         <m-option v-bind="args">
@@ -56,4 +58,4 @@ export const ActiveIconedOption = (args) => ({
         </m-option>
     `,
 });
-ActiveIconedOption.args = {...ActiveIconedOption.args, active: true};
+ActiveIconedOption.args = { ...Default.args, active: true };

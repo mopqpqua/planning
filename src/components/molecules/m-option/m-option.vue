@@ -4,7 +4,7 @@
             'm-option',
             {'m-option--active': active}
         ]"
-        @click="$emit('option-chosen', option.value)"
+        @click="$emit('option-chosen', option)"
     >
         <slot name="image"></slot>
         {{ option.label }}
@@ -24,6 +24,7 @@ export default defineComponent({
                 value: null,
                 label: 'Label',
             }),
+            validator: task => ['value', 'label'].every(key => key in task),
         },
     },
     emits: ['option-chosen'],

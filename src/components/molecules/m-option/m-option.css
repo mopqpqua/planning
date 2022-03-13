@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     column-gap: 16px;
+    box-sizing: border-box;
     text-align: center;
     list-style: none;
     cursor: pointer;

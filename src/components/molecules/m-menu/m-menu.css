@@ -1,0 +1,7 @@
+.m-menu {
+    width: 124px;
+    min-height: 36px;
+    padding-inline-start: 0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+}

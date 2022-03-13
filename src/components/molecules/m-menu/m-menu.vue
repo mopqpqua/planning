@@ -23,10 +23,12 @@ export default defineComponent({
             default: () => ([]),
         },
     },
-    setup() {
+    emits: ['option-changed'],
+    setup(props, { emit }) {
         const currentOption = ref({ value: null });
-        const changeCurrentOption = (optionValue) => {
-            currentOption.value = optionValue;
+        const changeCurrentOption = (option) => {
+            currentOption.value = option;
+            emit('option-changed', currentOption.value);
         };
 
         return { currentOption, changeCurrentOption };
