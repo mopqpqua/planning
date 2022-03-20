@@ -1,0 +1,15 @@
+.m-multi-menu {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.16);
+}
+
+.m-multi-menu .m-menu {
+    box-shadow: none;
+}
+
+.m-multi-menu__submenu:not(:last-child) {
+    width: max-content;
+    border-bottom: 1px solid var(--color-bg-lightgray);
+}
