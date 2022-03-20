@@ -3,7 +3,7 @@
     height: 14px;
     padding: 1px;
     border-radius: 32px;
-    background: var(--color-blue-main);
+    background: var(--color-bg-gray);
     cursor: pointer;
 }
 
@@ -17,11 +17,15 @@
     transition: transform .2s;
 }
 
+.a-switch--checked {
+    background: var(--color-blue-main);
+}
+
 .a-switch--checked::before {
     transform: translateX(12px);
 }
 
 .a-switch--disabled {
-    background: rgba(16, 113, 255, 0.16);
+    background: var(--color-bg-lightgray);
     cursor: not-allowed;
 }

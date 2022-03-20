@@ -1,5 +1,6 @@
 :root {
     /* COLORS ======= */
     --color-blue-main: #1070FF;
-    --color-bg-gray: rgba(0, 0, 0, .1);
+    --color-bg-gray: rgba(0, 0, 0, .22);
+    --color-bg-lightgray: rgba(0, 0, 0, .11);
 }
