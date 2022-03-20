@@ -12,7 +12,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue';
-import MOption from '@molecules/m-option/m-option';
+import MOption from '@molecules/m-option';
 
 export default defineComponent({
     name: 'm-menu',
